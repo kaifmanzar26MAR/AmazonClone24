@@ -1,0 +1,133 @@
+.pview_container{
+    padding: 100px 10px 10px 10px;
+    background-color: whitesmoke;
+    
+}
+
+.pview_container .pcon{
+    width: 100vw - 20px;
+    display: flex;
+    gap: 20px;
+}
+.pcon .pimage{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    position: fixed;
+}
+.pimage img{
+    width: 70%;
+    object-fit:cover;
+}
+
+
+.pcon .ptexcon{
+    width: 50%;
+    line-height: 20px;
+    margin-left: 38%;
+}
+.ptexcon hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ptexcon h2{
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.ptexcon .cat{
+    background-color: rgb(181, 5, 40);
+    width: fit-content;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.ptexcon .discount{
+    padding: 8px;
+    font-size: 30px;
+}
+.ptexcon .services{
+    display: flex;
+    gap: 3%;
+}
+.ptexcon .services .sub_serv{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    color: rgb(13, 128, 174);
+}
+.ptexcon .services .sub_serv img{
+    width: 40px;
+}
+
+.ptexcon .pro_details{
+    width: 50%;
+    line-height: 30px;
+}
+.ptexcon .pro_details p{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.pcon .p_pay{
+    width: 20%;
+    padding: 20px;
+    border: 1px solid gray;
+    height: fit-content;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 20px;
+}
+.p_pay .stock p{
+    font-size: 14px;
+    color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.p_pay .stock select{
+    margin: 10px 0px 10px 0px;
+    width: 40%;
+    padding: 2px;
+    border-radius: 20px;
+    outline: none;
+    color: gray;
+    font-size: 12px;
+}
+
+.p_pay .buttons button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 234, 0);
+}
+@media (max-width:950px) {
+    .pview_container{
+        padding-top: 60px;
+    }
+    .pcon{
+        flex-direction: column;
+        display: flex;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        
+    }
+    .pcon .pimage{
+        position: relative;
+    }
+    .pcon .ptexcon{
+        margin-left: 0px;
+        width: 90%;
+    }
+    .pcon .p_pay{
+        width: 80%;
+    }
+}

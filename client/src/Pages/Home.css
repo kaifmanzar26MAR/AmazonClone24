@@ -1,0 +1,116 @@
+#maindiv{
+    background-color: gainsboro;
+
+}
+.cara_con_main{
+    /* position: relative; */
+    margin-bottom: 390px;
+    
+}
+.cara_con_main .offer_cont_box{
+    color:black;
+    font-weight: 500;
+    font-size: 30px;
+    z-index: 2;
+    position: relative;
+    top: 50vh;
+}
+.offer_cont_box{
+    /* padding: 20px; */
+    width:100% - 20px;
+    /* background-color: red; */
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+    flex-wrap: wrap;
+    background: linear-gradient(transparent,gainsboro 50%);
+}
+.offer_cont_box .offer_box{
+    background-color: white;
+    padding: 1vw;
+    height: 500px;
+    line-height: 60px;
+    width: 290px;
+    position: relative;
+    overflow: hidden;
+}
+.offer_box h4{
+    width: 310px;
+    line-height: normal;
+}
+.offer_box a{
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+}
+.offer_cont_box .offer_item_cont{
+    max-width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    gap: 10px;
+
+}
+.offer_cont_box .offer_item_cont .offer_items{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.offer_cont_box .offer_item_cont .offer_items img{
+    max-width:9.2vw;
+    object-fit: cover;
+}
+.offer_items span{
+    font-size: large;
+    color: #cc0c39;
+    font-weight: bold;
+}
+.offer_det .off{
+    color: white;
+    background-color: #cc0c39;
+    padding: 5px;
+
+}
+.offer_box .sign_call{
+    background-color: white;
+    padding: 20px;
+    margin: -20px;
+    /* position: absolute; */
+}
+.sign_call button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: #ffd814;
+    border: none;
+    cursor: pointer;
+}
+.offer_box .rand_pro{
+    font-size: 15px;
+    line-height: normal;
+    
+    background-color: white;
+    margin: 50px -20px 20px -20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rand_pro img{
+    width: 160px;
+}
+.rand_pro .rp_dis h3{
+    color: maroon;
+    font-size: 30px;
+}

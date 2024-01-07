@@ -1,0 +1,27 @@
+.allpro_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.allpro_container .one_pro{
+    font-size: 15px;
+    line-height: normal;
+    width: 300px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.one_pro img{
+    width: 160px;
+}
+.one_pro .op_dis h3{
+    color: maroon;
+    font-size: 30px;
+}
