@@ -1,9 +1,29 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './cart.css'
 const Orders = () => {
-    <style>
+  const [orderdata,setOrderdata]=useState([{product_id:"",product_name:"",price:"",quantity:"",date:""}]);
+  useEffect(()=>{
+    const getorders=async()=>{
+      try {
+        const res=await fetch('http://localhost:4000/getcartitem',{
+          method:"POST",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body:JSON.stringify({userId:"2341234"})
+        });
+        const data=await res.json();
+        console.log(data);
+        setOrderdata(...data);
+        
 
-    </style>
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getorders();
+    console.log(orderdata);
+  },[])
   return (
     <>
       <div className="cart_container">

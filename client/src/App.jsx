@@ -9,6 +9,7 @@ import SignIn from './Pages/SignIn'
 import Login from './Pages/Login'
 import ViewAll from './Pages/ViewAll'
 import AddProduct from './Pages/AddProduct'
+import About from './Pages/About'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/viewall' element={<ViewAll/>}/>
         <Route path='/admin/addproduct' element={<AddProduct/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </>
   )

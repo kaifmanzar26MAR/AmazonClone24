@@ -5,6 +5,7 @@
     padding: 100px 20px 20px 20px;
     display: flex;
     gap: 2%;
+    
 }
 .cart_container .pro_list{
     width:70%;
@@ -22,6 +23,9 @@
 .pro_list .product{
     display: flex;
     gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 30px;
 }
 .product .carimage{
     height: 200px;
@@ -55,7 +59,7 @@
     margin-top: 20px;
 }
 .cart_menu select{
-    width: 100px;
+    width: 105px;
     padding: 4px;
     border-radius: 8px;
     outline: none;

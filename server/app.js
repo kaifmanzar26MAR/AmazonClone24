@@ -77,7 +77,7 @@ app.post('/login',async(req,res)=>{
             });
             
             console.log("cokkie added");
-            res.json({message:"login"});
+            res.json({user});
         }else{
             console.log("error......")
             throw new Error("User not matched");
@@ -102,6 +102,7 @@ app.post('/getuser',async(req,res)=>{
     try {
         const users=await User.find();
         console.log(users);
+        console.log("hi")
         res.json(users);
     } catch (error) {
         res.status(500).json({error:"Internal Server Error"});
@@ -123,7 +124,7 @@ app.get('/userdata',authenticate,async(req,res)=>{
 
 //PRoduct
 
-//adding product to databse   connected
+//adding product to databse admin  connected
 app.post('/addproduct',async (req,res)=>{
     const data=req.body;
     console.log(data);
@@ -139,7 +140,7 @@ app.post('/addproduct',async (req,res)=>{
     }
 })
 
-//geting all producs
+//geting all producs 
 app.get('/getproducts',async(req,res)=>{
     try {
         const product=await Products.find();
@@ -149,7 +150,7 @@ app.get('/getproducts',async(req,res)=>{
     }
 })
 
-//get product with id
+//get product with id 
 app.get('/getproduct/:product_id',async(req,res)=>{
     try {
         const product_id=req.params.product_id;
@@ -209,8 +210,9 @@ app.get('/updatproduct/:product_id', async (req, res) => {
 app.get('/addtocart',async(req,res)=>{
 
     try {
-        const user=await User.findOne({username:"kaifmanzar1@gmail.com"}); //getting current user
-        const productdata={product_id:11121,product_name:"hi new product 2",price:34,quantity:23};
+        const user=await User.findOne({email:"kaifmanzae@gmai.com"}); //getting current user
+        console.log(user);
+        const productdata={product_id:11122,product_name:"hi new product 1",price:3454,quantity:2};
         const ispresent= user.cart.find((e)=>{ return e.product_id===productdata.product_id});
 
         if(ispresent){
@@ -233,17 +235,17 @@ app.get('/addtocart',async(req,res)=>{
         res.send({message:"saved"})
     } catch (error) {
         console.log(error);
-        res.status(500).send({message:error});
+        res.status(500).send({error:error});
     }
 
     
 })
 
 
-//getting all cart items
-app.get('/getcartitem',async(req,res)=>{
+//getting all cart items of a user connected
+app.post('/getcartitem',async(req,res)=>{
     try {
-        const user=await User.findOne({username:"kaifmanzar1@gmail.com"});
+        const user=await User.findOne({email:"kaifmanzae@gmai.com"});
         const cartitems= user.cart;
         console.log(cartitems);
         res.send(cartitems);
@@ -268,10 +270,10 @@ app.get('/placeorder',async(req,res)=>{
 })
 
 
-//geting all orders
+//geting all orders of a user
 app.get('/getorders',async(req,res)=>{
     try {
-        const user=await User.findOne({username:"kaifmanzar1@gmail.com"});
+        const user=await User.findOne({email:"kaifmanzar1@gmail.com"});
         const orders=user.orders
         res.send(orders);
     } catch (error) {

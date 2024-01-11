@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './sign.css'
+import { useGlobalContext } from '../Context/GlobalComponent';
 const Login = () => {
     const [data,setData]=useState({email:"",password:""});
-
-
+    const {login_user,updateLoginUser} = useGlobalContext();
+    
     const handleform=async (e)=>{
       e.preventDefault();
       console.log(data);
@@ -16,7 +17,11 @@ const Login = () => {
           body:JSON.stringify(data)
         });
         const ret=await res.json();
-        if(ret.message){
+        if(ret){
+          console.log(ret);
+          console.log(login_user);
+          updateLoginUser(ret.user);
+          console.log(login_user.email);
           alert("user logedin");
         }
       } catch (error) {
